@@ -1,0 +1,1 @@
+Katie Fenn is a software engineer with ten years of experience working with JS, CSS and PHP. She is usually up far too late working on open source projects or playing videogames, and up far too early watching motorsport.

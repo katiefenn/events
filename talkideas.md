@@ -24,6 +24,13 @@ WebPack is commonly used for bundling JS modules, but its flexibility means it c
 
 This talk introduces WebPack and will demonstrate how to write, bundle and use CSS Modules. We'll also examine their benefits, and why they can help in ways other tools have failed in the past.
 
+Writing JavaScript Stylesheets and Not Ending the World
+============================================
+styles.js: sounds wrong, doesn't it? But wait! Defining styles as JavaScript objects allows you to use, manipulate and insert them into your React components just like... JavaScript.
+
+This talk looks at some of the tools that allow you to load JavaScript stylesheets, and how they add true modularity to CSS. We'll explore how this changes stylesheet design, and the freedom to call a button a .button instead of .search__button--hidden.
+
+By the end of this talk, you will be able to set up the popular tool Radium, write styles modularly, and apply them to a React component. You'll also discover expressive features such as using maths in property values, dead code elimination and conditional styles.
 
 Discovering Devops with Ansible
 ===============================

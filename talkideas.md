@@ -20,9 +20,9 @@ Writing Modular Stylesheets with CSS Modules
 ============================================
 Composition has long been a goal of CSS design. Creating a rich library of styles that can be reused and combined saves time in the long run, but often lead to unmaintainable or verbose code.
 
-WebPack is commonly used for bundling JS modules, but its flexibility means it can also be used to load CSS Modules: local styles that can be imported and exported just like scripts.
+CSS Modules is a new tool that changes everything. You can write styles within a safe local scope without the risk of them being overwritten. Your styles can also be imported and exported like scripts.
 
-This talk introduces WebPack and will demonstrate how to write, bundle and use CSS Modules. We'll also examine their benefits, and why they can help in ways other tools have failed in the past.
+This talk introduces CSS Modules and will demonstrate how to write, bundle and use modular stylesheets. We'll also examine their benefits, and why they can help in ways other tools have failed in the past.
 
 Writing JavaScript Stylesheets and Not Ending the World
 ============================================
@@ -46,6 +46,53 @@ You'll learn everything needed to set up your own host, and you'll discover the 
 - I want to demonstrate Ansible alongside other tools designed for ease-of-use, such as Digital Ocean and the Caddy webserver.
 
 
+Walking the Line: Becoming a Line Manager
+=========================================
+You're five years into your career, you're gaining confidence in what you do, life is good! The news comes out of the blue: we'd like you to be a MANAGER.
+
+Sounds scary, huh?
+
+Management is hardly the role many of us expected to take when we discovered coding, but there comes a time when your skill and experience can help others on the path. You can help people shape their careers, and gain influence to make your company a better place to work. This talk will dispel the responsibilities and the rewards of being an line manager, and recount what it's like to take a profoundly important role with zero experience.
+
+
+The Ins and Outs of Debugging
+=============================
+There's only one thing more difficult than writing code: debugging code. Luckily, JavaScript is equipped with a large toolbox to help you step through and dissect your scripts.
+
+This talk introduces debuggers and demonstrates how their features can be used to pick bugs apart. We will then venture beyond the desktop, debugging code in unit tests, on mobile devices and on remote servers. Finally, we will explore how time-travelling debugging lets you rewind and fast-forward your applications.
+
+
+Opening the Modular CSS Toolkit
+===============================
+Modular CSS tools have started a quiet renaissance in the CSS world. The introduction of CSS Modules, Radium and Aphrodite finally allows us to work in managable components, and you've decided to see what the fuss is about. Great! What next?
+
+This talk examines the tools at our disposal and discusses their strengths and weaknesses. We will see how they are set up, and consider which tool you should choose for the job. Along the way, I will confront some of the problems with adopting modularity: responsive design and performance.
+
+
+How Useful is Your Code Test?
+=============================
+Code tests are an almost inescapable part of recruitment. They are praised for extending a candidate's technical and practical skills, and maligned for excluding underprivileged people. It's time we reflected on this topic as an industry and questioned how useful our code tests really are.
+
+We will examine the kinds of tests commonly set by recruiters and discuss how they affect applicants. We will also present data gathered from a survey on tests taken across the industry. Finally, we will reflect on our own experiences and try to answer the question: what is the best way of finding out how people code?
+
+
+A Functional JS Field Guide
+=========================
+JavaScript is a language of two flavours: object-oriented and functional. Some would say functional is JavaScript's dominant flavour, but only recently have we started exploring its uses fully.
+
+This talk will introduce the basic ingredients of functional programming and explain why embracing them makes JavaScript easier to work with.
+
+Secure your site like it's 1999
+===============================
+Life in the early days of the web was hard. One day your HTML is disintegrating, the next you are fighting someone named "*~*Ninjad00d*~*" who has found a way to take over your forum system. Lessons in security in these days were hard learned.
+
+These are the true stories from the early days of the web and how forums, chat rooms and online games were turned upside down for fun and profit. If you stick around after laughing at the misfortune of online pioneers, there will also be lessons about finding your way in a world that wants to exploit your every mistake.
+
+---------------------------
+
+This is a light-hearted talk about web security, exploring how web forums, chat rooms and online games were exploited by what are now well-known vulnerabilities. Unfortunate examples of communities falling victim to SQL injection, cross-site scripting and inadequate input validation will be used to explain how exploits work and why it is important to learn about them. Most importantly, it will highlight that everyone starts life as a beginner and now is always a good time to start learning.
+
+
 Getting started in open source talk
 ===================================
 *TODO: Rewrite*
@@ -53,14 +100,4 @@ Getting started in open source talk
 
 In-depth profiling talk
 =======================
-*TODO: Rewrite*
-
-
-In-depth debugger talk
-======================
-*TODO: Rewrite*
-
-
-Beginners FP / async talk
-=========================
 *TODO: Rewrite*

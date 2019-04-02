@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/devtools.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+		<script src="js/counter.js"></script>
+		<script src="js/song.js"></script>
+		<script src="js/error.js"></script>
+		<script src="js/add-large-string-to-object.js"></script>
+		<script src="js/rotate.js"></script>
+		<script src="js/cpu-loader.js"></script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section data-background="#70A300">
+					<h2>Pinned expressions</h2>
+					<p>Keep an eye on values</p>
+					<button onclick="season = 'duck season!'">duck season</button>
+					<button onclick="season = 'rabbit season!'">rabbit season</button>
+				</section>
+
+				<section data-background="#F6511D" class="section-head">
+					<h2>Sources</h2>
+				</section>
+
+				<section data-background="#70A300">
+					<h2>Breakpoints</h2>
+					<p>Pause your script</p>
+					<p class='counter'></p>
+					<button onclick="startCounter()">start counter</button>
+					<button onclick="stopCounter()">stop counter</button>
+				</section>
+
+				<section data-background="#70A300">
+					<h2>Resume script</h2>
+					<img src="img/sources-resume.png" alt="Resume script button" style="border: 0; box-shadow: none; width: 100%; background: 0; width: 227px" />
+					<p>Resumes your script</p>
+					<p class='counter'></p>
+					<button onclick="startCounter()">start counter</button>
+					<button onclick="stopCounter()">stop counter</button>
+				</section>
+
+				<section data-background="#70A300">
+					<h2>Step over</h2>
+					<img src="img/sources-step-over.png" alt="Resume script button" style="border: 0; box-shadow: none; width: 100%; background: 0; width: 227px" />
+					<p>Advance script to next line</p>
+					<p class='verses'></p>
+					<button onclick="addVerse()">add verse</button>
+				</section>
+
+				<section data-background="#70A300">
+					<h2>Step into</h2>
+					<img src="img/sources-step-into.png" alt="Resume script button" style="border: 0; box-shadow: none; width: 100%; background: 0; width: 227px" />
+					<p>Pause script on first line of next function</p>
+					<p class='verses'></p>
+					<button onclick="addVerse()">add verse</button>
+				</section>
+
+				<section data-background="#70A300">
+					<h2>Pause on exception</h2>
+					<img src="img/sources-pause-on-exceptions.png" alt="Resume script button" style="border: 0; box-shadow: none; width: 100%; background: 0; width: 227px" />
+					<p>Pause script before exceptions</p>
+					<button onclick="causeError()">cause error</button>
+				</section>
+
+				<section data-background="#F6511D" class="section-head">
+					<h2>Performance</h2>
+				</section>
+
+				<section data-background="#70A300">
+					<h2>Performance</h2>
+					<p>Memory</p>
+					<button onclick="addLargeStringToArray()">add stuff to memory</button>
+					<div class="rotate" style="position: relative;">💩</div>
+				</section>
+
+				<section data-background="#F6511D" class="section-head">
+					<h2>Everything else</h2>
+				</section>
+
+				<section data-background="#70A300">
+					<h2>Command menu</h2>
+					<p>Shift + Cmd / Ctrl + P</p>
+					<div class="rotate" style="position: relative;">💩</div>
+				</section>
+
+				<section data-background="#70A300">
+					<h2>Dark mode</h2>
+				</section>
+
+				<section data-background="#70A300">
+					<h2>JavaScript profiling</h2>
+					<button onclick="longFunction()">call long function</button>
+					<button onclick="shortFunction()">call short function</button>
+				</section>
+
+				<section data-background="#70A300">
+					<h2>Node.JS debugging</h2>
+					<p>node --inspect-brk</p>
+				</section>
+			</div>
+
+			<div class="banner"><span class="name">@katie_fenn</span></div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

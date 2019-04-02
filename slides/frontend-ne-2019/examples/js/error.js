@@ -1,0 +1,3 @@
+function causeError () {
+  isntDefined.alsoIsntDefined()
+}

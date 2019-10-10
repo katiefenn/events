@@ -1,0 +1,3 @@
+function accidentalGlobalsBroken () {
+  string = generateLongString()
+}

@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/memory.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section class="accidental-globals-broken">
+					<h2>accidental globals</h2>
+					<pre>
+						<code class="hljs" data-trim>
+							function accidentalGlobalsBroken () {
+							  string = generateLongString()
+							}
+						</code>
+					</pre>
+
+
+					<button onclick="accidentalGlobalsBroken()">generate data</button>
+				</section>
+
+				<section class="accidental-globals-fixed">
+					<h2>accidental globals</h2>
+					<pre>
+						<code class="hljs" data-trim>
+							function accidentalGlobalsFixed () {
+							  let string = generateLongString()
+							}
+						</code>
+					</pre>
+					<button onclick="accidentalGlobalsFixed()">generate data</button>
+				</section>
+
+				<section class="forgotten-timers">
+					<h2>timers</h2>
+					<pre>
+						<code class="hljs" data-trim>
+							function startTimer () {
+							  let string = ''
+							  timer = setInterval(() => {
+							    string += generateString()
+							  }, 1000)
+							}
+
+							function stopTimer () {
+							  clearInterval(timer)
+							}
+						</code>
+					</pre>
+					<button onclick="startTimer()">start timer</button>
+					<button onclick="stopTimer()">stop timer</button>
+				</section>
+
+				<section class="forgotten-event-handlers" id="e-h">
+					<h2>event handlers</h2>
+					<pre>
+						<code class="hljs" data-trim>
+							function createButton() {
+							  var string = ""
+							  button = document.createElement('button')
+							  button.innerText = "Create large string"
+							  button.type = "button"
+							  button.onclick = () => string += generateString()
+							  document.getElementById("e-h").appendChild(button)
+							}
+						</code>
+					</pre>
+				</section>
+
+
+<!--
+				<section class="forgotten-event-handlers" id="e-h">
+					<h2>detached dom nodes</h2>
+					<pre>
+						<code class="hljs" data-trim>
+							function generateDOMNodes () {
+							  buttons = new Array(10000)
+							    .fill('')
+							    .map(() => document.createElement('input'))
+							}
+						</code>
+					</pre>
+					<button onclick="generateDOMNodes()">generate dom nodes</button>
+				</section>
+-->
+			</div>
+
+			<div class="banner"><span class="name">@katie_fenn</span></div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				history: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+		<script src="js/accidental-globals-broken.js"></script>
+		<script src="js/accidental-globals-fixed.js"></script>
+		<script src="js/forgotten-timers.js"></script>
+		<script src="js/forgotten-event-handlers.js"></script>
+		<script src="js/detached-dom-nodes.js"></script>
+		<script src="js/generate-long-string.js"></script>
+		<script src="js/generate-string.js"></script>
+	</body>
+</html>
